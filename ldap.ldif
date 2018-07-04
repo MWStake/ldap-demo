@@ -1,0 +1,238 @@
+dn: uid=newton,dc=example,dc=com
+sn: Newton
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: newton
+mail: newton@ldap.forumsys.com
+cn: Isaac Newton
+
+dn: uid=einstein,dc=example,dc=com
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Albert Einstein
+sn: Einstein
+uid: einstein
+mail: einstein@ldap.forumsys.com
+telephoneNumber: 314-159-2653
+
+dn: uid=tesla,dc=example,dc=com
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: posixAccount
+cn: Nikola Tesla
+sn: Tesla
+uid: tesla
+mail: tesla@ldap.forumsys.com
+uidNumber: 88888
+gidNumber: 99999
+homeDirectory: home
+
+dn: uid=galieleo,dc=example,dc=com
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Galileo Galilei
+sn: Galilei
+uid: galieleo
+mail: galieleo@ldap.forumsys.com
+
+dn: uid=euler,dc=example,dc=com
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: euler
+sn: Euler
+cn: Leonhard Euler
+mail: euler@ldap.forumsys.com
+
+dn: uid=gauss,dc=example,dc=com
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Carl Friedrich Gauss
+sn: Gauss
+uid: gauss
+mail: gauss@ldap.forumsys.com
+
+dn: uid=riemann,dc=example,dc=com
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Bernhard Riemann
+sn: Riemann
+uid: riemann
+mail: riemann@ldap.forumsys.com
+
+dn: uid=euclid,dc=example,dc=com
+uid: euclid
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Euclid
+sn: Euclid
+mail: euclid@ldap.forumsys.com
+
+dn: ou=mathematicians,dc=example,dc=com
+uniqueMember: uid=euclid,dc=example,dc=com
+uniqueMember: uid=riemann,dc=example,dc=com
+uniqueMember: uid=euler,dc=example,dc=com
+uniqueMember: uid=gauss,dc=example,dc=com
+uniqueMember: uid=test,dc=example,dc=com
+ou: mathematicians
+cn: Mathematicians
+objectClass: groupOfUniqueNames
+objectClass: top
+
+dn: ou=scientists,dc=example,dc=com
+uniqueMember: uid=einstein,dc=example,dc=com
+uniqueMember: uid=galieleo,dc=example,dc=com
+uniqueMember: uid=tesla,dc=example,dc=com
+uniqueMember: uid=newton,dc=example,dc=com
+uniqueMember: uid=training,dc=example,dc=com
+uniqueMember: uid=jmacy,dc=example,dc=com
+ou: scientists
+cn: Scientists
+objectClass: groupOfUniqueNames
+objectClass: top
+
+dn: cn=read-only-admin,dc=example,dc=com
+sn: Read Only Admin
+cn: read-only-admin
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+
+dn: ou=italians,ou=scientists,dc=example,dc=com
+uniqueMember: uid=tesla,dc=example,dc=com
+ou: italians
+cn: Italians
+objectClass: groupOfUniqueNames
+objectClass: top
+
+dn: uid=test,dc=example,dc=com
+objectClass: posixAccount
+objectClass: top
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+gidNumber: 0
+givenName: Test
+sn: Test
+displayName: Test
+uid: test
+initials: TS
+homeDirectory: home
+cn: Test
+uidNumber: 24601
+o: Company
+
+dn: ou=chemists,dc=example,dc=com
+ou: chemists
+objectClass: groupOfUniqueNames
+objectClass: top
+uniqueMember: uid=curie,dc=example,dc=com
+uniqueMember: uid=boyle,dc=example,dc=com
+uniqueMember: uid=nobel,dc=example,dc=com
+uniqueMember: uid=pasteur,dc=example,dc=com
+cn: Chemists
+
+dn: uid=curie,dc=example,dc=com
+uid: curie
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Marie Curie
+sn: Curie
+mail: curie@ldap.forumsys.com
+
+dn: uid=nobel,dc=example,dc=com
+uid: nobel
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+mail: nobel@ldap.forumsys.com
+sn: Nobel
+cn: Alfred Nobel
+
+dn: uid=boyle,dc=example,dc=com
+uid: boyle
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Robert Boyle
+sn: Boyle
+mail: boyle@ldap.forumsys.com
+telephoneNumber: 999-867-5309
+
+dn: uid=pasteur,dc=example,dc=com
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+sn: Pasteur
+cn: Louis Pasteur
+uid: pasteur
+telephoneNumber: 602-214-4978
+mail: pasteur@ldap.forumsys.com
+
+dn: uid=nogroup,dc=example,dc=com
+uid: nogroup
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: No Group
+mail: nogroup@ldap.forumsys.com
+sn: Group
+
+dn: uid=training,dc=example,dc=com
+uid: training
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: FS Training
+sn: training
+mail: training@forumsys.com
+telephoneNumber: 888-111-2222
+
+dn: uid=jmacy,dc=example,dc=com
+uid: jmacy
+telephoneNumber: 888-111-2222
+sn: training
+cn: FS Training
+userPassword:: e1NIQX1XNnBoNU1tNVB6OEdnaVVMYlBnekczN21qOWc9
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+mail: jmacy-training@forumsys.com

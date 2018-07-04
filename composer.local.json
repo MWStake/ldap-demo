@@ -1,0 +1,34 @@
+{
+	"require": {
+		"mediawiki/ldap-provider": "dev-master",
+		"mediawiki/ldap-user-info": "dev-master",
+		"mediawiki/ldap-groups": "dev-master",
+		"mediawiki/ldap-authentication": "dev-master"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": false,
+	"config": {
+		"minimum-stability": "dev",
+		"prefer-stable": false,
+		"prefer": "source"
+	},
+	"repositories": [
+        {
+		"type": "vcs",
+		"url": "../extensions/LDAPUserInfo"
+	        },
+        {
+		"type": "vcs",
+		"url": "../extensions/LDAPAuthentication"
+	        },
+        {
+		"type": "vcs",
+		"url": "../extensions/LDAPProvider"
+	        },
+        {
+		"type": "vcs",
+		"url": "../extensions/PluggableAuth"
+	        }
+        ]
+
+}
