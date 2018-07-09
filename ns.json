@@ -1,0 +1,23 @@
+{
+	"globalAdmin": "sysop",
+	"Math": {
+		"constant": "NS_MATH",
+		"id": 5000,
+		"includable": false,
+		"lockdown": [
+			"move", "edit", "create", "createpage", "createtalk"
+		],
+		"group": "Mathematicians",
+		"permission": "edit-math"
+	},
+	"Chemistry": {
+		"constant": "NS_CHEMISTRY",
+		"id": 5002,
+		"includable": false,
+		"lockdown": [
+			"read", "move", "edit", "create", "createpage", "createtalk"
+		],
+		"group": "Chemists",
+		"permission": "edit-chemistry"
+	}
+}

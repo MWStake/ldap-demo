@@ -1,32 +1,32 @@
 {
-	"LDAP Demo": {
-		"connection": {
-				"server": "10.5.5.1",
-				"user": "cn=read-only-admin,dc=example,dc=com",
-				"pass": "password",
-				"basedn": "dc=example,dc=com",
-				"userbasedn": "dc=example,dc=com",
-				"searchattribute": "uid",
-				"usernameattribute": "uid",
-				"realnameattribute": "cn",
-				"emailattribute": "mail"
-		},
-		"userinfo": {
-			"attributes-map": {
-				"email": "mail",
-				"realname": "cn",
-				"nickname": "uid",
-				"language": "preferredlanguage"
-			}
-		},
-		"groupsync": {
-			"grouplookup": "UniqueMember",
-			"mapping": {
-				"Mathematicians": "ou=mathematicians,dc=example,dc=com",
-				"Scientists": "ou=scientists,dc=example,dc=com",
-				"Italian scientists": "ou=italians,ou=scientists,dc=example,dc=com",
-				"Chemists": "ou=chemists,dc=example,dc=com"
-			}
-		}
-	}
+  "LDAP Demo": {
+    "connection": {
+      "server": "10.5.5.1",
+      "user": "cn=read-only-admin,dc=example,dc=com",
+      "pass": "password",
+      "basedn": "dc=example,dc=com",
+      "userbasedn": "dc=example,dc=com",
+      "searchattribute": "uid",
+      "usernameattribute": "uid",
+      "realnameattribute": "cn",
+      "emailattribute": "mail"
+    },
+    "userinfo": {
+      "attributes-map": {
+        "email": "mail",
+        "realname": "cn",
+        "nickname": "uid",
+        "language": "preferredlanguage"
+      }
+    },
+    "groupsync": {
+      "grouplookup": "UniqueMember",
+      "mapping": {
+        "Mathematicians": "ou=mathematicians,dc=example,dc=com",
+        "Scientists": "ou=scientists,dc=example,dc=com",
+        "Italian scientists": "ou=italians,ou=scientists,dc=example,dc=com",
+        "Chemists": "ou=chemists,dc=example,dc=com"
+      }
+    }
+  }
 }

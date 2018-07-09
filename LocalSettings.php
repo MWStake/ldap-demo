@@ -148,3 +148,8 @@ $LDAPProviderCacheType = CACHE_MEMCACHED;
 # Following are only for testing and should be removed when this is done.
 $LDAPProviderCacheTime = 1;
 $LDAPProviderCacheType = CACHE_NONE;
+
+wfLoadExtension( "NamespaceManager" );
+$NamespaceManagerMapFile = "$IP/ns.json";
+
+wfLoadExtension( "Lockdown" );

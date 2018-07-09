@@ -5,7 +5,7 @@
 [submodule "skins/Vector"]
 	path = skins/Vector
 	url = https://gerrit.wikimedia.org/r/mediawiki/skins/Vector
-	branch = REL1_27
+	branch = REL1_31
 [submodule "extensions/LDAPProvider"]
 	path = extensions/LDAPProvider
 	url = https://github.com/mwstake/mediawiki-extensions-LDAPProvider
@@ -21,3 +21,7 @@
 [submodule "extensions/PluggableAuth"]
 	path = extensions/PluggableAuth
 	url = https://github.com/wikimedia/mediawiki-extensions-PluggableAuth
+[submodule "extensions/Lockdown"]
+	path = extensions/Lockdown
+	url = https://gerrit.wikimedia.org/r/mediawiki/extensions/Lockdown
+	branch = REL1_31
