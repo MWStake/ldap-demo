@@ -19,7 +19,7 @@ Any time a part of the configuration needs to be changed, the following process 
 if [ ! -x mediawiki/.git ]; then
     git submodule add -f -b REL1_31 https://gerrit.wikimedia.org/r/p/mediaiwki/core mediawiki
 else
-    (cd mediawiki && git pull)
+    ( cd mediawiki && git fetch origin && git checkout REL1_31 )
 fi
 ls -l mediawiki/extensions
 #+END_SRC
@@ -503,7 +503,7 @@ for ext in LDAPProvider LDAPAuthentication LDAPUserInfo LDAPGroups; do
         git submodule add -f https://github.com/mwstake/mediawiki-extensions-$ext $dir
         git submodule update --init $dir
     else
-        ( cd $dir; git pull origin master)
+        ( cd $dir && git checkout master && git pull origin )
     fi
 done
 dir=extensions/PluggableAuth
@@ -511,7 +511,7 @@ if [ ! -d $dir ]; then
     git submodule add -f https://github.com/wikimedia/mediawiki-extensions-PluggableAuth $dir
     git submodule update --init $dir
 else
-    ( cd $dir; git pull origin master )
+    ( cd $dir && git checkout master && git pull origin )
 fi
 #+END_SRC
 
@@ -662,6 +662,8 @@ done
 - Main namespace is writable by all users
 - Chemistry namespace is readable and writable only by chemists
 ** Use NamespaceManager to manage namespaces
+[[https://github.com/hexmode/mediawiki-NamespaceManager][NamespaceManager]] is a MediaWiki extension which is intended to help you manage namespace configuration by putting all configuration in a seperate json file.
+
 - Add mediawiki/namespace-manager to composer.local.json
 #+BEGIN_SRC sh :output none :session tangle
 jq '.["require"]["mediawiki/namespace-manager"] = "dev-master"' composer.local.json | sponge composer.local.json
@@ -676,7 +678,7 @@ jq '.["require"]["mediawiki/namespace-manager"] = "dev-master"' composer.local.j
 
 #+RESULTS:
 
-- Point to the namespace map file in LocalSettings.php
+- Load NamespaceManager and point to the namespace map file in LocalSettings.php
 #+BEGIN_SRC php :tangle LocalSettings.php
 wfLoadExtension( "NamespaceManager" );
 $NamespaceManagerMapFile = "$IP/../ns.json";
@@ -717,7 +719,7 @@ if [ ! -d $dir ]; then
     git submodule add -b REL1_31 -f ssh://gerrit.wikimedia.org:29418/mediawiki/$dir $dir
     git submodule update --init $dir
 else
-    ( cd $dir; git pull origin REL1_31 )
+    ( cd $dir && git checkout REL1_31 && git pull origin )
 fi
 rm -f mediawiki/$dir
 ln -s ../../$dir mediawiki/$dir
